@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=19">
-<link rel="stylesheet" href="intro.css?v=19">
+<link rel="stylesheet" href="style.css?v=20">
+<link rel="stylesheet" href="intro.css?v=20">
 <script>document.documentElement.classList.add('intro-on'); if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
 </head>
 <body class="light-menu">
@@ -76,6 +76,15 @@
         <div class="txt fade" style="--delay:.3s">
           <p>Welcome to the exciting world of DoraCura! Twin baby vampires Dora and Cura sing, play and learn something new every day, together with their family and the friendliest monsters in the neighbourhood.</p>
           <p>Nursery rhymes and kids songs about sharing, eating well, staying safe and loving each other. All on YouTube.</p>
+        </div>
+        <!-- 10초 카운트다운: 인트로 PLAY 뒤 표시, 0이 되면 사이트(타이틀·책·스크롤)가 열림 (intro.js) -->
+        <div class="countdown" role="timer" aria-live="off" hidden>
+          <p class="cd-label">The show starts in</p>
+          <div class="cd-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="cd-track" cx="60" cy="60" r="54"/><circle class="cd-bar" cx="60" cy="60" r="54" pathLength="1"/></svg>
+            <span class="cd-num">10</span>
+          </div>
+          <p class="cd-sub">Get ready to sing with Dora &amp; Cura!</p>
         </div>
       </div>
     </section>
@@ -306,7 +315,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="intro.js?v=19"></script>
-<script src="main.js?v=19"></script>
+<script src="intro.js?v=20"></script>
+<script src="main.js?v=20"></script>
 </body>
 </html>

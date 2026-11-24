@@ -1,7 +1,8 @@
 /* DoraCura — game-style loading intro.
    Preloads the key images, shows a bat running along a candy loading bar,
    then a PLAY button; on start it bursts stars/hearts/bats and opens an iris
-   onto the page. Fires `intro:done` (and sets window.__introDone) for main.js. */
+   onto the page, runs a 10-second countdown in the hero, and only then fires
+   `intro:done` (and sets window.__introDone) for main.js. */
 (() => {
   'use strict';
   const intro = document.getElementById('intro');
@@ -123,10 +124,41 @@
       intro.classList.add('reveal');
       root.classList.remove('intro-on');
       window.scrollTo(0, 0);
-      setTimeout(done, 250);          // hero title + book begin while the iris opens
+      setTimeout(countdown, 250);     // 10s countdown in the hero, then title + book begin
     }, still ? 0 : 380);
     setTimeout(() => { intro.classList.add('gone'); intro.setAttribute('aria-hidden', 'true'); }, still ? 500 : 1600);
   }
+  /* ----- hero countdown: 10 → 0, then open the site ----- */
+  const SECONDS = 10;
+  function countdown() {
+    const cd = document.querySelector('.hero .countdown');
+    if (!cd) return done();
+    const num = cd.querySelector('.cd-num');
+    const bar = cd.querySelector('.cd-bar');
+    root.classList.add('cd-on');
+    cd.hidden = false;
+    cd.classList.add('in');
+    const t1 = performance.now();
+    let last = SECONDS;
+    num.textContent = SECONDS;
+    cd.setAttribute('aria-label', `${SECONDS} seconds`);
+    (function frame(now) {
+      if (window.scrollY) window.scrollTo(0, 0);           // keep the hero in place
+      const left = Math.max(0, SECONDS - (now - t1) / 1000);
+      bar.style.strokeDashoffset = 1 - left / SECONDS;   // ring empties smoothly
+      const n = Math.ceil(left);
+      if (n !== last) {
+        last = n;
+        num.textContent = n;
+        cd.setAttribute('aria-label', `${n} seconds`);
+        if (!still) { num.classList.remove('tick'); void num.offsetWidth; num.classList.add('tick'); }
+      }
+      if (left > 0) return requestAnimationFrame(frame);
+      cd.classList.add('out');
+      setTimeout(() => { cd.hidden = true; root.classList.remove('cd-on'); done(); }, still ? 0 : 450);
+    })(t1);
+  }
+
   intro.addEventListener('click', start);
   startBtn.addEventListener('click', e => { e.stopPropagation(); start(e); });
   window.addEventListener('keydown', e => { if (!started && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); start(e); } });

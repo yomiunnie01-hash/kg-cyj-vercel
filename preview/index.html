@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=19">
-<link rel="stylesheet" href="intro.css?v=19">
+<link rel="stylesheet" href="style.css?v=20">
+<link rel="stylesheet" href="intro.css?v=20">
 <script>document.documentElement.classList.add('intro-on'); if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
 </head>
 <body class="light-menu">
@@ -75,6 +75,15 @@
         <div class="txt fade" style="--delay:.3s">
           <p>Welcome to the exciting world of DoraCura! Twin baby vampires Dora and Cura sing, play and learn something new every day, together with their family and the friendliest monsters in the neighbourhood.</p>
           <p>Nursery rhymes and kids songs about sharing, eating well, staying safe and loving each other. All on YouTube.</p>
+        </div>
+        <!-- 10초 카운트다운: 인트로 PLAY 뒤 표시, 0이 되면 사이트(타이틀·책·스크롤)가 열림 (intro.js) -->
+        <div class="countdown" role="timer" aria-live="off" hidden>
+          <p class="cd-label">The show starts in</p>
+          <div class="cd-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="cd-track" cx="60" cy="60" r="54"/><circle class="cd-bar" cx="60" cy="60" r="54" pathLength="1"/></svg>
+            <span class="cd-num">10</span>
+          </div>
+          <p class="cd-sub">Get ready to sing with Dora &amp; Cura!</p>
         </div>
       </div>
     </section>
@@ -308,6 +317,7 @@
   <h4>프리뷰 노트 · 승인용</h4>
   <p class="muted">레퍼런스 ribbit.dk/process 를 크롬에서 프레임 단위로 캡처하고, 사이트 CSS·JS를 직접 읽어 애니메이션 수치를 그대로 옮겼습니다.</p>
   <ol>
+    <li><b>10초 카운트다운</b>: PLAY 후 히어로 가운데에 10→0 숫자와 줄어드는 원형 게이지가 표시됨. 0이 되면 카운트다운이 사라지고 타이틀·책이 등장하며 스크롤이 풀림.</li>
     <li><b>인트로 라인 리빌</b>: 큰 타이틀 각 줄이 아래(90%)에서 올라옴. 1.2s expo, 줄마다 0.1s 지연. 본문은 0.4s 페이드.</li>
     <li><b>3D 책 표지</b>: 화면 아래에서 1.5s expo로 떠오름. 마우스를 올리면 표지가 6° 살짝 열림. 클릭하면 펼침.</li>
     <li><b>스크롤 책 넘김</b>: 진행도 N = 스크롤 ÷ (화면높이/2). 표지 회전 180°×N², 확대 1→화면폭, 중앙 이동. 펼친 흰 면이 다음 섹션의 배경이 됨.</li>
@@ -337,7 +347,7 @@
 </aside>
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="intro.js?v=19"></script>
-<script src="main.js?v=19"></script>
+<script src="intro.js?v=20"></script>
+<script src="main.js?v=20"></script>
 </body>
 </html>

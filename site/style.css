@@ -95,6 +95,26 @@ body.scrolled .site-header .menu:hover .eyes{ opacity:0; }
 .hero .txt{ width:calc((var(--column) * 3) + (var(--gutter) * 2)); min-width:280px; padding-top:var(--gutter); font-size:15px; }
 .hero .txt p + p{ margin-top:1.4em; }
 
+/* ===== Hero countdown (10s gate before the site opens) ===== */
+.countdown{ position:absolute; inset:0; z-index:3; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:clamp(12px,2vh,22px); text-align:center; pointer-events:none; }
+.countdown[hidden]{ display:none; }
+html.cd-on, html.cd-on body{ overflow:hidden; }   /* no scrolling until the countdown ends */
+.countdown .cd-label{ font-family:var(--serif); font-weight:600; font-size:clamp(18px,2.2vw,30px); color:var(--yellow); letter-spacing:.02em; }
+.countdown .cd-sub{ font-size:clamp(14px,1.3vw,18px); opacity:.8; }
+.cd-ring{ position:relative; width:clamp(180px,26vmin,300px); aspect-ratio:1; }
+.cd-ring svg{ position:absolute; inset:0; width:100%; height:100%; transform:rotate(-90deg); overflow:visible; }
+.cd-ring circle{ fill:none; stroke-width:9; }
+.cd-ring .cd-track{ stroke:rgba(255,255,255,.14); }
+.cd-ring .cd-bar{ stroke:var(--red); stroke-linecap:round; stroke-dasharray:1 1; stroke-dashoffset:0; filter:drop-shadow(0 0 10px rgba(227,38,47,.55)); }
+.cd-num{ position:absolute; inset:0; display:grid; place-items:center; font-family:var(--serif); font-variation-settings:"wdth" 75; font-weight:700; font-size:clamp(84px,14vmin,160px); line-height:1; color:var(--paper); text-shadow:.04em .06em 0 var(--blue); font-variant-numeric:tabular-nums; }
+.cd-num.tick{ animation:cdTick .5s var(--back); }
+@keyframes cdTick{ 0%{ transform:scale(1.45); opacity:.2; } 100%{ transform:scale(1); opacity:1; } }
+.countdown.in{ animation:cdIn .6s var(--back) both; }
+.countdown.out{ animation:cdOut .45s var(--expo) forwards; }
+@keyframes cdIn{ from{ opacity:0; transform:scale(.8); } to{ opacity:1; transform:none; } }
+@keyframes cdOut{ to{ opacity:0; transform:scale(1.25); } }
+@media (prefers-reduced-motion:reduce){ .cd-num.tick, .countdown.in, .countdown.out{ animation:none; } }
+
 /* ===== Book (ref: .m.process-book) ===== */
 .book{ position:fixed; left:0; bottom:0; width:calc((var(--column) * 4) + (var(--gutter) * 6)); opacity:0; z-index:1; user-select:none; -webkit-tap-highlight-color:transparent; outline:none; }
 .book.in{ opacity:1; transition:opacity .2s ease var(--delay); }
