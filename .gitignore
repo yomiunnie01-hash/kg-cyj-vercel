@@ -1,0 +1,7 @@
+# 비밀 정보 (OpenAI API 키)
+.env
+
+# 빌드 결과물 / 캐시
+DoraCura.html
+__pycache__/
+*.pyc

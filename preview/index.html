@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoraCura World — Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=19">
+<link rel="stylesheet" href="intro.css?v=19">
+<script>document.documentElement.classList.add('intro-on'); if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+</head>
+<body class="light-menu">
+
+<!-- ============ GAME-STYLE LOADING INTRO ============ -->
+<div id="intro" class="intro" role="dialog" aria-label="Loading DoraCura">
+  <div class="i-stars" aria-hidden="true"></div>
+  <div class="i-bats" aria-hidden="true"></div>
+  <img class="i-fly" src="assets/hd/kids_fly.webp" alt="" aria-hidden="true">
+  <img class="i-char i-dora" src="assets/hd/dora_peace.webp" alt="" aria-hidden="true">
+  <img class="i-char i-cura" src="assets/hd/cura_cheer.webp" alt="" aria-hidden="true">
+  <img class="i-char i-bio" src="assets/hd/bio_wave.webp" alt="" aria-hidden="true">
+  <div class="i-center">
+    <div class="i-logo-wrap"><img class="i-logo" src="assets/logo_v.png" alt="DoraCura"><span class="i-shine" aria-hidden="true"></span></div>
+    <div class="i-loader">
+      <div class="i-bar"><div class="i-fill"></div>
+        <span class="i-runner" aria-hidden="true"><svg viewBox="0 0 64 32"><path d="M32 30c-2-4-5-6-9-5 1-4-1-7-5-8 0 3-2 5-5 5-3-3-7-4-12-2 6-5 9-12 9-18 3 5 8 7 13 6 3 4 7 6 9 6l1-4 1 4c2 0 6-2 9-6 5 1 10-1 13-6 0 6 3 13 9 18-5-2-9-1-12 2-3 0-5-2-5-5-4 1-6 4-5 8-4-1-7 1-9 5z"/></svg></span>
+      </div>
+      <div class="i-meta"><span class="i-tip">Waking up the bats…</span><span class="i-pct">0%</span></div>
+    </div>
+    <button class="i-start" type="button"><span>▶</span> PLAY</button>
+    <p class="i-hint">Click anywhere or press Enter</p>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="menu">
+    <a class="logo" href="#top" aria-label="DoraCura home"><img src="assets/logo_h.png" alt="DoraCura"></a>
+    <div class="eyes" aria-hidden="true">
+      <div class="eye"><span></span></div>
+      <div class="eye"><span></span></div>
+    </div>
+    <nav>
+      <a href="#top" class="active">Home</a>
+      <a href="#ch-1">Characters</a>
+      <a href="#ch-3">World</a>
+      <a href="#ch-6">Videos</a>
+    </nav>
+  </div>
+  <a class="subscribe" href="https://www.youtube.com/@doracura_en?sub_confirmation=1" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM9.7 15V9l5.8 3-5.8 3Z"/></svg>
+    Subscribe
+  </a>
+</header>
+
+<main id="top">
+  <div class="page">
+
+    <!-- ============ HERO (ref: process-hero) ============ -->
+    <section class="hero" data-color="light-menu">
+      <div class="content">
+        <div class="title line-by-line" data-delay=".2">
+          <h1 class="sr-only">Meet Dora and Cura.</h1>
+          <div class="tl">
+            <h3><span>meet</span></h3>
+            <h2><span>Dora</span></h2>
+          </div>
+          <div class="br">
+            <h3><span>and</span></h3>
+            <h2><span>Cura.</span></h2>
+          </div>
+        </div>
+        <div class="txt fade" style="--delay:.3s">
+          <p>Welcome to the exciting world of DoraCura! Twin baby vampires Dora and Cura sing, play and learn something new every day, together with their family and the friendliest monsters in the neighbourhood.</p>
+          <p>Nursery rhymes and kids songs about sharing, eating well, staying safe and loving each other. All on YouTube.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOK (ref: process-book) ============ -->
+    <div class="book" aria-label="Open the DoraCura storybook" role="button" tabindex="0">
+      <div class="p left">
+        <div class="front">
+          <div class="cover" data-ai="AI 생성 표지 (gpt-image-2.5-sunburst)">
+            <div class="cover-shine"></div>
+            <svg class="cover-bats" viewBox="0 0 300 420" aria-hidden="true">
+              <g fill="#3a1a8c">
+                <path d="M40 70c6-8 14-10 20-6 2-6 6-8 9-6 3-2 7 0 9 6 6-4 14-2 20 6-8-1-13 2-15 7-3-3-6-4-9-3-1 3-4 5-5 5s-4-2-5-5c-3-1-6 0-9 3-2-5-7-8-15-7Z"/>
+                <path d="M222 120c5-7 12-9 17-5 2-5 5-7 8-5 3-2 6 0 8 5 5-4 12-2 17 5-7-1-11 2-13 6-3-2-5-3-8-2-1 3-3 4-4 4s-3-1-4-4c-3-1-5 0-8 2-2-4-6-7-13-6Z"/>
+              </g>
+              <g fill="#ffe58a"><circle cx="250" cy="60" r="3"/><circle cx="60" cy="160" r="2"/><circle cx="270" cy="210" r="2.5"/><circle cx="30" cy="260" r="2"/></g>
+            </svg>
+            <p class="cover-kicker">The Little Book of</p>
+            <img class="cover-logo" src="assets/logo_v.png" alt="DoraCura">
+            <!-- AI 표지: tools/generate_cover.py 가 assets/cover_ai_simple.png 를 만들면 자동으로 교체됨 -->
+            <img class="cover-ai" src="assets/cover_ai_simple.png" alt="" onload="this.closest('.cover').classList.add('has-ai')" onerror="this.remove()">
+            <div class="cover-chars">
+              <img src="assets/hd/twins_hug.webp" alt="Dora and Cura hugging and waving">
+            </div>
+          </div>
+        </div>
+        <div class="back"><div class="bg"></div></div>
+      </div>
+      <div class="p right"><div class="front"><div class="bg"></div></div></div>
+    </div>
+
+    <!-- ============ CHAPTERS (ref: process-chapters) ============ -->
+    <section class="chapters" data-color="dark-menu">
+      <div class="l">
+        <div class="framed">
+          <!-- 1 -->
+          <div class="section open" data-i="0">
+            <button class="section-btn"><span class="arrow"></span><span class="num a">1</span><span>Dora &amp; Cura</span></button>
+            <div class="content">
+              <div class="circular"><svg viewBox="0 0 120 50"><path id="arc1" d="M10 46 A52 52 0 0 1 110 46" fill="none"/><text><textPath href="#arc1" startOffset="50%" text-anchor="middle">DoraCura Chapter</textPath></text></svg></div>
+              <h5 class="a">1</h5>
+              <h3>Dora &amp; Cura</h3>
+              <div class="txt"><p>Meet the twins! Dora wears her red pigtails tied up like little bat wings, and Cura never goes anywhere without his red bow tie. These two baby vampires have big ruby eyes, tiny fangs and even bigger hearts. They share almost everything (except the swing, maybe).</p></div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="section" data-i="1">
+            <button class="section-btn"><span class="arrow"></span><span class="num b">2</span><span>The Family</span></button>
+            <div class="content">
+              <div class="circular"><svg viewBox="0 0 120 50"><path id="arc2" d="M10 46 A52 52 0 0 1 110 46" fill="none"/><text><textPath href="#arc2" startOffset="50%" text-anchor="middle">DoraCura Chapter</textPath></text></svg></div>
+              <h5 class="b">2</h5>
+              <h3>The Family</h3>
+              <div class="txt"><p>Baby brother Bio is the newest (and loudest) vampire in the house: his pacifier never stays in for long. Mom Bella and Dad Draco keep everyone fed, safe and tucked in, and they always have enough hugs to go around, even when Dora and Cura get a little jealous.</p></div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="section" data-i="2">
+            <button class="section-btn"><span class="arrow"></span><span class="num c">3</span><span>Home Sweet Home</span></button>
+            <div class="content">
+              <div class="circular"><svg viewBox="0 0 120 50"><path id="arc3" d="M10 46 A52 52 0 0 1 110 46" fill="none"/><text><textPath href="#arc3" startOffset="50%" text-anchor="middle">DoraCura Chapter</textPath></text></svg></div>
+              <h5 class="c">3</h5>
+              <h3>Home Sweet Home</h3>
+              <div class="txt"><p>A two-storey brick house with a garden, a fountain and a garage. Inside: Dora's pink room, Cura's starry blue room, a cozy living room with a fireplace, a kitchen with Bio's high chair, a bat-themed bathroom, a baby room and a giant playroom.</p></div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="section" data-i="3">
+            <button class="section-btn"><span class="arrow"></span><span class="num d">4</span><span>Friends Next Door</span></button>
+            <div class="content">
+              <div class="circular"><svg viewBox="0 0 120 50"><path id="arc4" d="M10 46 A52 52 0 0 1 110 46" fill="none"/><text><textPath href="#arc4" startOffset="50%" text-anchor="middle">DoraCura Chapter</textPath></text></svg></div>
+              <h5 class="d">4</h5>
+              <h3>Friends Next Door</h3>
+              <div class="txt"><p>The neighbourhood is full of monster families: the big-hearted Frankens, the Werewolves (who usually look just like people) and the Mummies, who don't have mouths, except when it's time to brush their teeth!</p></div>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="section" data-i="4">
+            <button class="section-btn"><span class="arrow"></span><span class="num e">5</span><span>Playtime</span></button>
+            <div class="content">
+              <div class="circular"><svg viewBox="0 0 120 50"><path id="arc5" d="M10 46 A52 52 0 0 1 110 46" fill="none"/><text><textPath href="#arc5" startOffset="50%" text-anchor="middle">DoraCura Chapter</textPath></text></svg></div>
+              <h5 class="e">5</h5>
+              <h3>Playtime</h3>
+              <div class="txt"><p>A slide, a ball pit, a little haunted toy house and a pumpkin cushion: the playroom is where every song starts. Bio builds wobbly block towers with the twins (and knocks them down again), then everyone lines up the plushies, from cuddly bats to friendly spiders.</p></div>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="section" data-i="5">
+            <button class="section-btn"><span class="arrow"></span><span class="num f">6</span><span>Watch &amp; Sing</span></button>
+            <div class="content">
+              <div class="circular"><svg viewBox="0 0 120 50"><path id="arc6" d="M10 46 A52 52 0 0 1 110 46" fill="none"/><text><textPath href="#arc6" startOffset="50%" text-anchor="middle">DoraCura Chapter</textPath></text></svg></div>
+              <h5 class="f">6</h5>
+              <h3>Watch &amp; Sing</h3>
+              <div class="txt"><p>Sing along with Dora and Cura on YouTube! Short songs and longer compilations about eating well, sharing, safety and family. Pick a video, press play, and don't eat the slime.</p>
+                <a class="yt-link" href="https://www.youtube.com/@doracura_en" target="_blank" rel="noopener">youtube.com/@doracura_en →</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="r">
+        <!-- 1 Dora & Cura : 39 / 61 -->
+        <div class="rsec" id="ch-1">
+          <div class="row" style="--ar:2">
+            <div class="panel w39 bg-a mask playful" data-offy="0,0,0,-40">
+              <div class="confetti" aria-hidden="true"></div>
+              <span class="name-tag dora">Dora</span>
+              <div class="poser" data-interval="2300">
+                <img class="on" src="assets/hd/dora_wave.webp" alt="Dora waving">
+                <img src="assets/hd/dora_wink.webp" alt="">
+                <img src="assets/hd/dora_peace.webp" alt="">
+                <img src="assets/hd/dora_cheek.webp" alt="">
+                <img src="assets/hd/dora_think.webp" alt="">
+              </div>
+            </div>
+            <div class="panel w61 bg-a2 mask playful" data-offy="30,0,-40,0">
+              <div class="confetti" aria-hidden="true"></div>
+              <span class="name-tag cura">Cura</span>
+              <div class="poser" data-interval="2300" data-offset="1150">
+                <img class="on" src="assets/hd/cura_wave.webp" alt="Cura waving">
+                <img src="assets/hd/cura_cheer.webp" alt="">
+                <img src="assets/hd/cura_kneel.webp" alt="">
+                <img src="assets/hd/cura_smug.webp" alt="">
+              </div>
+              <img class="peek" src="assets/hd/bio_wave.webp" alt="Baby Bio waving">
+            </div>
+          </div>
+        </div>
+        <!-- 2 Family : wide -->
+        <div class="rsec" id="ch-2">
+          <div class="panel bg-b mask" data-offy="0,40,-40,0" style="--ar:1.8">
+            <img class="char float d3" src="assets/hd/family_sit.webp" alt="Bio, Dora, Cura, Mom Bella and Dad Draco sitting together">
+          </div>
+        </div>
+        <!-- 3 Home : 61 / 39 -->
+        <div class="rsec" id="ch-3">
+          <div class="row" style="--ar:1.75">
+            <div class="panel w61 mask" data-offy="40,0,0,0">
+              <img class="photo kenburns" src="assets/house1.jpg" alt="The DoraCura family house">
+            </div>
+            <div class="panel w39 mask" data-offy="0,30,0,0">
+              <img class="photo kenburns k2" src="assets/room_dora.jpg" alt="Dora's room">
+            </div>
+          </div>
+          <div class="panel mask room-strip" data-offy="0,0,0,0" style="--ar:4.2">
+            <div class="strip">
+              <img src="assets/room_cura.jpg" alt="Cura's room"><img src="assets/room_living.jpg" alt="Living room"><img src="assets/room_kitchen.jpg" alt="Kitchen"><img src="assets/room_bath.jpg" alt="Bathroom"><img src="assets/room_baby.jpg" alt="Baby room"><img src="assets/room_master.jpg" alt="Parents' bedroom">
+              <img src="assets/room_cura.jpg" alt=""><img src="assets/room_living.jpg" alt=""><img src="assets/room_kitchen.jpg" alt=""><img src="assets/room_bath.jpg" alt=""><img src="assets/room_baby.jpg" alt=""><img src="assets/room_master.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- 4 Friends : wide -->
+        <div class="rsec" id="ch-4">
+          <div class="panel mask banner-panel" data-offy="40,0,0,0" style="--ar:6.04">
+            <img class="photo kenburns" src="assets/banner3.jpg" alt="Dora and Cura with Franken, Mummy and Werewolf friends">
+          </div>
+          <div class="panel mask banner-panel" data-offy="0,0,-30,0" style="--ar:6.04">
+            <img class="photo kenburns k2" src="assets/banner2.jpg" alt="Dora and Cura in the playroom with their monster friends">
+          </div>
+        </div>
+        <!-- 5 Playtime : 61 + stacked 39 -->
+        <div class="rsec" id="ch-5">
+          <div class="row prod" style="--ar:1.7">
+            <div class="panel w61 mask" data-offy="0,30,-30,0">
+              <img class="photo kenburns" src="assets/room_play.jpg" alt="The playroom">
+            </div>
+            <div class="stack w39">
+              <div class="panel bg-e mask" data-offy="40,0,0,0"><img class="char float d2" src="assets/hd/kids_blocks.webp" alt="Dora, Bio and Cura playing with blocks"></div>
+              <div class="panel bg-e2 mask" data-offy="0,0,-40,0"><img class="photo contain" src="assets/toys.jpg" alt="Toys and plushies"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 6 Watch : featured + grid -->
+        <div class="rsec" id="ch-6">
+          <div class="panel bg-f mask videos" data-offy="40,0,0,0">
+            <div class="vid-feature" data-id="shWRQF_SDCc">
+              <img src="https://i.ytimg.com/vi/shWRQF_SDCc/hqdefault.jpg" alt="">
+              <button class="play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+              <div class="vid-cap"><span class="tag">Latest</span>Baby Vampire, Don't Eat Grown-Up Food! <em>10:50</em></div>
+            </div>
+            <div class="vid-grid"></div>
+            <div class="langs">
+              <img src="assets/lang1.png" alt="English"><img src="assets/lang2.png" alt="Español"><img src="assets/lang3.png" alt="한국어"><img src="assets/lang4.png" alt="Indonesia"><img src="assets/lang5.png" alt="日本語"><img src="assets/lang6.png" alt="Português">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" data-color="light-menu">
+  <div class="f-top">
+    <div class="f-col">
+      <p class="f-lead">Dora and Cura are singing right now.<br>Come and sing along:</p>
+      <p><a href="https://www.youtube.com/@doracura_en" target="_blank" rel="noopener">▶ youtube.com/@doracura_en</a></p>
+      <p class="muted">Nursery Rhymes &amp; Kids Songs</p>
+    </div>
+    <div class="f-col">
+      <a href="https://www.youtube.com/@doracura_en" target="_blank" rel="noopener">YOUTUBE</a>
+      <a href="#ch-1">CHARACTERS</a>
+      <a href="#ch-3">WORLD</a>
+    </div>
+    <a class="subscribe yellow" href="https://www.youtube.com/@doracura_en?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
+  </div>
+  <!-- 유튜브 배너 시안(보라 배경 · 전구 줄 · 로고 + 캐릭터 무리) 기반 -->
+  <div class="f-stage">
+    <svg class="lights" viewBox="0 0 1600 90" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="bat-sky" aria-hidden="true"></div>
+    <img class="f-fly" src="assets/hd/kids_fly.webp" alt="Dora, Bio and Cura flying with their capes">
+    <img class="f-logo" src="assets/logo_v.png" alt="DoraCura">
+    <p class="f-tag">Sing, play &amp; grow with Dora and Cura!</p>
+    <div class="cast">
+      <img class="family-big" src="assets/hd/family_cheer.webp" alt="Dad Draco, Mom Bella, Dora, Bio and Cura cheering together">
+    </div>
+    <div class="hanger moon" aria-hidden="true">
+      <svg viewBox="0 0 120 120"><path d="M78 8a54 54 0 1 0 34 78A46 46 0 1 1 78 8Z" fill="#FFE27A"/><circle cx="40" cy="44" r="5" fill="#F5C94A"/><circle cx="30" cy="74" r="7" fill="#F5C94A"/></svg>
+      <img src="assets/hd/bio_sleep.webp" alt="">
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>DoraCura · Nursery Rhymes &amp; Kids Songs</span>
+    <span>Copyright KIGLE Corp. All rights reserved.</span>
+    <span>@doracura_en</span>
+  </div>
+</footer>
+
+<!-- ============ PREVIEW NOTES (승인용) ============ -->
+<button class="notes-toggle" aria-expanded="false">프리뷰 노트</button>
+<aside class="notes" hidden>
+  <h4>프리뷰 노트 · 승인용</h4>
+  <p class="muted">레퍼런스 ribbit.dk/process 를 크롬에서 프레임 단위로 캡처하고, 사이트 CSS·JS를 직접 읽어 애니메이션 수치를 그대로 옮겼습니다.</p>
+  <ol>
+    <li><b>인트로 라인 리빌</b>: 큰 타이틀 각 줄이 아래(90%)에서 올라옴. 1.2s expo, 줄마다 0.1s 지연. 본문은 0.4s 페이드.</li>
+    <li><b>3D 책 표지</b>: 화면 아래에서 1.5s expo로 떠오름. 마우스를 올리면 표지가 6° 살짝 열림. 클릭하면 펼침.</li>
+    <li><b>스크롤 책 넘김</b>: 진행도 N = 스크롤 ÷ (화면높이/2). 표지 회전 180°×N², 확대 1→화면폭, 중앙 이동. 펼친 흰 면이 다음 섹션의 배경이 됨.</li>
+    <li><b>스냅 + 슬라이드업</b>: N ≥ 0.95이면 챕터가 아래에서 1s expo로 올라오고 스크롤이 0.5s 동안 정위치로 맞춰짐.</li>
+    <li><b>스티키 아코디언</b>: 왼쪽 프레임이 고정된 채 현재 챕터만 펼쳐짐(0.8s quart). 위 챕터는 위로 접히고 아래 챕터는 바닥에 탭으로 남음.</li>
+    <li><b>기울어진 마스크 패널</b>: 오른쪽 이미지 패널이 비스듬한 clip-path + 둥근 모서리. 레퍼런스의 루프 영상 대신 캐릭터 플로팅·켄번즈 효과.</li>
+    <li><b>헤더</b>: 스크롤하면 로고+메뉴 pill이 접히고 마우스를 따라보는 뱀파이어 눈으로 바뀜. 섹션 색에 따라 밝음/어두움 전환.</li>
+    <li><b>푸터</b>: 유튜브 배너 시안처럼 보라 배경 + 반짝이는 전구 줄 + 로고. 캐릭터들이 튀어 오르고, 마우스를 올리면 폴짝 뜀. 망토 3남매가 날아다니고, 초승달 위에서 아기 비오가 꾸벅꾸벅 졺. 친구들 없이 도라큐라 가족만 등장.</li>
+    <li><b>챕터 1</b>: PDF 포즈 시트의 도라·큐라 동작 컷이 2.3초마다 통통 튀며 바뀜. 패널을 클릭하면 바로 다음 포즈.</li>
+    <li><b>커서 친구</b>: 2D 도라·큐라 얼굴이 마우스를 따라다니고, 눈이 커서를 보며 깜빡임. 링크 위에서는 입을 벌려 웃고, 클릭하면 하트·박쥐가 톡 튀어나옴.</li>
+  </ol>
+  <h5>레퍼런스 → DoraCura 매핑</h5>
+  <ul>
+    <li>from Idea to Done. → <b>meet Dora and Cura.</b></li>
+    <li>"Creative PROCESS" 책 → <b>DoraCura 스토리북 표지</b></li>
+    <li>6단계(온보딩~딜리버리) → <b>쌍둥이 · 가족 · 집 · 친구들 · 놀이 · 유튜브</b></li>
+    <li>Book a meeting → <b>Subscribe</b>(유튜브 구독)</li>
+    <li>유튜브 채널 최신 영상 11개 + 6개 언어 아이콘을 6챕터에 포함</li>
+  </ul>
+  <h5>확인해 주세요</h5>
+  <ul>
+    <li>문구는 영어 채널(@doracura_en)에 맞춰 <b>영어</b>로 작성했습니다. 한국어가 필요하면 말씀해 주세요.</li>
+    <li>책 표지는 단순한 보라 배경 + 첨부해 주신 도라·큐라 포옹 이미지로 바꿨습니다. 키를 넣고 <code>python tools/generate_cover.py</code>를 실행하면 단순 배경 버전 AI 표지(<code>cover_ai_simple.png</code>)가 생성되어 자동 교체됩니다. 이전 AI 표지(<code>cover_ai.png</code>)는 지우지 않고 남겨 두었습니다.</li>
+    <li>폰트: 큰 제목은 둥근 유아동 폰트 <b>Fredoka</b>(좁은 폭), 본문은 <b>Nunito</b>.</li>
+  </ul>
+  <label class="ai-toggle"><input type="checkbox" checked> AI 교체 위치 표시</label>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="intro.js?v=19"></script>
+<script src="main.js?v=19"></script>
+</body>
+</html>
